@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Registrasi Ujian Sabuk Hitam</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Peserta Ujian Sabuk Hitam</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Data Registrasi Ujian Sabuk Hitam</h1>
-  <table id="recordsTable">
-    <thead>
-      <tr>
-        <th>Nomor Anggota</th>
-        <th>Nama Lengkap</th>
-        <th>Tempat Lahir</th>
-        <th>Tanggal Lahir</th>
-        <th>Tingkatan DAN Terakhir</th>
-        <th>Tanggal Ujian Terakhir</th>
-        <th>Kelayakan Ujian</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Data akan ditambahkan di sini -->
-    </tbody>
-  </table>
-  
-  <p><a href="index.html">Kembali ke Form Registrasi</a></p>
+    <div class="container">
+        <h1>Daftar Peserta Ujian Sabuk Hitam</h1>
+        <table id="recordsTable">
+            <thead>
+                <tr>
+                    <th>Nama Lengkap</th>
+                    <th>Tempat Lahir</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Alamat Lengkap</th>
+                    <th>Ranting</th>
+                    <th>Cabang</th>
+                    <th>Provinsi</th>
+                    <th>No. MSH</th>
+                    <th>Tingkatan Terakhir</th>
+                    <th>Tanggal Ujian Terakhir</th>
+                    <th>Usia</th>
+                    <th>Usia Sabuk</th>
+                    <th>Syarat Usia</th>
+                    <th>Kelayakan Ujian</th>
+                </tr>
+            </thead>
+            <tbody id="recordsBody">
+                <!-- Records will be appended here dynamically -->
+            </tbody>
+        </table>
+    </div>
 
-  <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
