@@ -1,56 +1,59 @@
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  margin: 0;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('registrationForm');
+    const tanggalLahir = document.getElementById('tanggalLahir');
+    const tingkatanTerakhir = document.getElementById('tingkatanTerakhir');
+    const usia = document.getElementById('usia');
+    const usiaSabuk = document.getElementById('usiaSabuk');
+    const syaratUsia = document.getElementById('syaratUsia');
+    const kelayakanUjian = document.getElementById('kelayakanUjian');
+    const submitButton = document.getElementById('submitButton');
 
-h1 {
-  text-align: center;
-}
+    tanggalLahir.addEventListener('change', updateUsia);
+    tingkatanTerakhir.addEventListener('change', updateUsiaSabukDanSyaratUsia);
 
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
+    function updateUsia() {
+        const today = new Date();
+        const birthDate = new Date(tanggalLahir.value);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
 
-label {
-  display: block;
-  margin-bottom: 8px;
-}
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
 
-input, select, button {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-}
+        usia.value = age;
+        updateKelayakan();
+    }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+    function updateUsiaSabukDanSyaratUsia() {
+        const tingkat = parseInt(tingkatanTerakhir.value);
+        usiaSabuk.value = tingkat + 1;
 
-button:disabled {
-  background-color: #ccc;
-}
+        switch (tingkat) {
+            case 1:
+                syaratUsia.value = 19;
+                break;
+            case 2:
+                syaratUsia.value = 25;
+                break;
+            case 3:
+                syaratUsia.value = 30;
+                break;
+            case 4:
+                syaratUsia.value = 40;
+                break;
+            case 5:
+                syaratUsia.value = 48;
+                break;
+            case 6:
+                syaratUsia.value = 55;
+                break;
+            default:
+                syaratUsia.value = 0;
+        }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
+        updateKelayakan();
+    }
 
-table, th, td {
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-}
-
+    function updateKelayakan() {
+        const age
