@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Registrasi Ujian Sabuk Hitam</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Form Registrasi Ujian Sabuk Hitam</h1>
+  <form id="registrationForm">
+    <label for="memberNumber">Nomor Anggota:</label>
+    <input type="text" id="memberNumber" required>
+    
+    <label for="fullName">Nama Lengkap:</label>
+    <input type="text" id="fullName" required>
+    
+    <label for="birthPlace">Tempat Lahir:</label>
+    <input type="text" id="birthPlace" required>
+    
+    <label for="birthDate">Tanggal Lahir:</label>
+    <input type="date" id="birthDate" required>
+    
+    <label for="rank">Tingkatan DAN Terakhir:</label>
+    <select id="rank" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    
+    <label for="lastExamDate">Tanggal Ujian Terakhir:</label>
+    <input type="date" id="lastExamDate" required>
+    
+    <label for="eligibility">Kelayakan Ujian:</label>
+    <input type="text" id="eligibility" readonly>
+    
+    <button type="submit" id="submitBtn" disabled>Submit</button>
+  </form>
+  
+  <p><a href="records.html">Lihat Data Registrasi</a></p>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
