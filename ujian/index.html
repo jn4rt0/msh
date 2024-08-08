@@ -1,47 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Registrasi Ujian Sabuk Hitam</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Peserta Ujian Sabuk Hitam</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Form Registrasi Ujian Sabuk Hitam</h1>
-  <form id="registrationForm">
-    <label for="memberNumber">Nomor Anggota:</label>
-    <input type="text" id="memberNumber" required>
-    
-    <label for="fullName">Nama Lengkap:</label>
-    <input type="text" id="fullName" required>
-    
-    <label for="birthPlace">Tempat Lahir:</label>
-    <input type="text" id="birthPlace" required>
-    
-    <label for="birthDate">Tanggal Lahir:</label>
-    <input type="date" id="birthDate" required>
-    
-    <label for="rank">Tingkatan DAN Terakhir:</label>
-    <select id="rank" required>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-    
-    <label for="lastExamDate">Tanggal Ujian Terakhir:</label>
-    <input type="date" id="lastExamDate" required>
-    
-    <label for="eligibility">Kelayakan Ujian:</label>
-    <input type="text" id="eligibility" readonly>
-    
-    <button type="submit" id="submitBtn" disabled>Submit</button>
-  </form>
-  
-  <p><a href="records.html">Lihat Data Registrasi</a></p>
+    <div class="container">
+        <h1>Registrasi Peserta Ujian Sabuk Hitam</h1>
+        <form id="registrationForm">
+            <label for="namaLengkap">Nama Lengkap:</label>
+            <input type="text" id="namaLengkap" name="namaLengkap" required>
 
-  <script src="js/script.js"></script>
+            <label for="tempatLahir">Tempat Lahir:</label>
+            <input type="text" id="tempatLahir" name="tempatLahir" required>
+
+            <label for="tanggalLahir">Tanggal Lahir:</label>
+            <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+
+            <label for="alamatLengkap">Alamat Lengkap:</label>
+            <input type="text" id="alamatLengkap" name="alamatLengkap" required>
+
+            <label for="ranting">Ranting:</label>
+            <input type="text" id="ranting" name="ranting" required>
+
+            <label for="cabang">Cabang:</label>
+            <input type="text" id="cabang" name="cabang" required>
+
+            <label for="provinsi">Provinsi:</label>
+            <input type="text" id="provinsi" name="provinsi" required>
+
+            <label for="noMsh">No. MSH:</label>
+            <input type="text" id="noMsh" name="noMsh" required>
+
+            <label for="tingkatanTerakhir">Tingkatan Terakhir:</label>
+            <select id="tingkatanTerakhir" name="tingkatanTerakhir" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <label for="tanggalUjianTerakhir">Tanggal Ujian Terakhir:</label>
+            <input type="date" id="tanggalUjianTerakhir" name="tanggalUjianTerakhir" required>
+
+            <!--<label for="usia">Usia:</label>-->
+            <input type="hidden" id="usia" name="usia" readonly>
+
+            <!--<label for="usiaSabuk">Usia Sabuk:</label>-->
+            <input type="hidden" id="usiaSabuk" name="usiaSabuk" readonly>
+
+            <!--<label for="syaratUsia">Syarat Usia:</label>-->
+            <input type="hidden" id="syaratUsia" name="syaratUsia" readonly>
+
+            <label for="kelayakanUjian">Kelayakan Ujian:</label>
+            <input type="text" id="kelayakanUjian" name="kelayakanUjian" readonly>
+
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
